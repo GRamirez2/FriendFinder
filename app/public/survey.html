@@ -1,14 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Friend Finder Survey</title>
+        <title>SURVEY</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     </head>
-    <body>
-    
-    <p>This is the survey page</p>
+    <body>   
+    <div class="container">
+        <br>
+        <div class="page-header">
+        <h1><center>FRIEND FINDER SURVEY</center></h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <div class="input-group">
+                <span class="input-group-addon" id="username">@</span>
+                <input type="text" class="form-control" id="userName" placeholder="User Name" aria-describedby="User Name">
+                </div>
+                <br>    
+                <label for="basic-url">A link to your portrait</label>
+                <div class="input-group">
+                <span class="input-group-addon" id="photoLink">https://example.com/img/</span>
+                <input type="text" class="form-control" id="photoURL" aria-describedby="photoLink">
+                </div>
+                <br>
+                <div class="well well-sm"><center>How many texts do you send a day?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q1-1" value="1"type="radio" name="q1"/>less than 5</label>
+                    <label class="radio-inline"><input id="q1-2" value="2"type="radio" name="q1"/>less than 15</label>
+                    <label class="radio-inline"><input id="q1-3" value="3"type="radio" name="q1"/>20 - 30</label>
+                    <label class="radio-inline"><input id="q1-4" value="4"type="radio" name="q1"/>more than 30</label>
+                    <label class="radio-inline"><input id="q1-5" value="5"type="radio" name="q1"/>I text all day long</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>Favorite Decade?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q2-1" value="1"type="radio" name="q2"/>1960s</label>
+                    <label class="radio-inline"><input id="q2-1" value="2"type="radio" name="q2"/>1970s</label>
+                    <label class="radio-inline"><input id="q2-1" value="3"type="radio" name="q2"/>1980s</label>
+                    <label class="radio-inline"><input id="q2-1" value="4"type="radio" name="q2"/>1990s</label>
+                    <label class="radio-inline"><input id="q2-1" value="5"type="radio" name="q2"/>2000s</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>Type of music you listen to the most?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q3-1" value="1"type="radio" name="q3"/>Rock</label>
+                    <label class="radio-inline"><input id="q3-1" value="2"type="radio" name="q3"/>Jazz</label>
+                    <label class="radio-inline"><input id="q3-1" value="3"type="radio" name="q3"/>Country</label>
+                    <label class="radio-inline"><input id="q3-1" value="4"type="radio" name="q3"/>Rap</label>
+                    <label class="radio-inline"><input id="q3-1" value="5"type="radio" name="q3"/>Pop</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>How often to do you drink alcohol? 
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q4-1" value="1"type="radio" name="q4"/>Always</label>
+                    <label class="radio-inline"><input id="q4-1" value="2"type="radio" name="q4"/>Often</label>
+                    <label class="radio-inline"><input id="q4-1" value="3"type="radio" name="q4"/>Sometimes</label>
+                    <label class="radio-inline"><input id="q4-1" value="4"type="radio" name="q4"/>Seldom</label>
+                    <label class="radio-inline"><input id="q4-1" value="5"type="radio" name="q4"/>Never</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>Your adult beverage of choice?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q5-1" value="1"type="radio" name="q5"/>Craft Beer</label>
+                    <label class="radio-inline"><input id="q5-1" value="2"type="radio" name="q5"/>Light Beer</label>
+                    <label class="radio-inline"><input id="q5-1" value="3"type="radio" name="q5"/>Spirits</label>
+                    <label class="radio-inline"><input id="q5-1" value="4"type="radio" name="q5"/>Red Wine</label>
+                    <label class="radio-inline"><input id="q5-1" value="5"type="radio" name="q5"/>White Wine</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>How often do you Karaoke?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q6-1" value="1"type="radio" name="q6"/>Always</label>
+                    <label class="radio-inline"><input id="q6-1" value="2"type="radio" name="q6"/>Often</label>
+                    <label class="radio-inline"><input id="q6-1" value="3"type="radio" name="q6"/>Sometimes</label>
+                    <label class="radio-inline"><input id="q6-1" value="4"type="radio" name="q6"/>Seldom</label>
+                    <label class="radio-inline"><input id="q6-1" value="5"type="radio" name="q6"/>Never</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>How often do you go dancing?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q7-1" value="1"type="radio" name="q7"/>Always</label>
+                    <label class="radio-inline"><input id="q7-1" value="2"type="radio" name="q7"/>Often</label>
+                    <label class="radio-inline"><input id="q7-1" value="3"type="radio" name="q7"/>Sometimes</label>
+                    <label class="radio-inline"><input id="q7-1" value="4"type="radio" name="q7"/>Seldom</label>
+                    <label class="radio-inline"><input id="q7-1" value="5"type="radio" name="q7"/>Never</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>Your favorite State?
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q8-1" value="1"type="radio" name="q8"/>Texas</label>
+                    <label class="radio-inline"><input id="q8-1" value="2"type="radio" name="q8"/>New York</label>
+                    <label class="radio-inline"><input id="q8-1" value="3"type="radio" name="q8"/>California</label>
+                    <label class="radio-inline"><input id="q8-1" value="4"type="radio" name="q8"/>Illinois</label>
+                    <label class="radio-inline"><input id="q8-1" value="5"type="radio" name="q8"/>Florida</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>Best description of a pefect Sunday.
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q9-1" value="1"type="radio" name="q9"/>Sleep</label>
+                    <label class="radio-inline"><input id="q9-1" value="2"type="radio" name="q9"/>Clean House</label>
+                    <label class="radio-inline"><input id="q9-1" value="3"type="radio" name="q9"/>Go to a Movie</label>
+                    <label class="radio-inline"><input id="q9-1" value="4"type="radio" name="q9"/>Long Hike</label>
+                    <label class="radio-inline"><input id="q9-1" value="5"type="radio" name="q9"/>Couch</label>
+                    </center>
+                </div>
+                <div class="well well-sm"><center>One thing I you wish you did better. 
+                    <br>
+                    <br>
+                    <label class="radio-inline"><input id="q10-1" value="1"type="radio" name="q10"/>Play Guitar</label>
+                    <label class="radio-inline"><input id="q10-1" value="2"type="radio" name="q10"/>Cook</label>
+                    <label class="radio-inline"><input id="q10-1" value="3"type="radio" name="q10"/>Draw</label>
+                    <label class="radio-inline"><input id="q10-1" value="4"type="radio" name="q10"/>Sing</label>
+                    <label class="radio-inline"><input id="q10-1" value="5"type="radio" name="q10"/>javascript</label>
+                    </center>
+                </div>
+                <br>
+                <button id="submitData" type="submit" class="btn pull-right btn-large btn-success">  SUBMIT  </button>
+                <br>
+                <br>
+                <br>
+            </div><!end of col-md-8>
+        </div><!end of row>
 
+    </div><!end of main container>
+<script type="text/javascript">
+
+var answerArr = [];
+
+$("#submitData").on('click', function() {
+        var user = $("#userName").val();
+        if(user == ""){alert("Please enter your name");
+        return;}//else{console.log(user)};
+
+        var photo = $("#photoURL").val();
+        if(photo == ""){alert("Please paste a link to a photo");
+        return;}//else{console.log(photo)};
+    
+        var q1 = $("input[name=q1]:checked").val();
+        if(q1 == undefined){alert("Please answer question 1");return;}else{answerArr.push(q1);}
+        
+        var q2 = $("input[name=q2]:checked").val();
+        if(q2 == undefined){alert("Please answer question 2");return;}else{answerArr.push(q2);}
+
+        var q3 = $("input[name=q3]:checked").val();
+        if(q3 == undefined){alert("Please answer question 3");return;}else{answerArr.push(q3);}
+
+        var q4 = $("input[name=q4]:checked").val();
+        if(q4 == undefined){alert("Please answer question 4");return;}else{answerArr.push(q4);}
+
+        var q5 = $("input[name=q5]:checked").val();
+        if(q5 == undefined){alert("Please answer question 5");return;}else{answerArr.push(q5);}
+
+        var q6 = $("input[name=q6]:checked").val();
+        if(q6 == undefined){alert("Please answer question 6");return;}else{answerArr.push(q6);}
+
+        var q7 = $("input[name=q7]:checked").val();
+        if(q7 == undefined){alert("Please answer question 7");return;}else{answerArr.push(q7);}
+
+        var q8 = $("input[name=q8]:checked").val();
+        if(q8 == undefined){alert("Please answer question 8");return;}else{answerArr.push(q8);}
+
+        var q9 = $("input[name=q9]:checked").val();
+        if(q9 == undefined){alert("Please answer question 9");return;}else{answerArr.push(q9);}
+
+        var q10 = $("input[name=q10]:checked").val();
+        if(q10 == undefined){alert("Please answer question 10");return;}else{answerArr.push(q10);}
+
+        console.log("complete")
+    	
+    return false;
+    });
+ </script>
     </body>
 </html>
