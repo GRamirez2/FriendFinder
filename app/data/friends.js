@@ -1,5 +1,5 @@
 var friendsArr = [
-  {
+	{
     name: 'michelle',
     photo: 'https://peopledotcom.files.wordpress.com/2016/08/michelle-obama-1024.jpg',
     scores: [

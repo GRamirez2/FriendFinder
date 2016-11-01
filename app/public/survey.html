@@ -228,6 +228,7 @@ $("#submitData").on('click', function() {
         var currentURL = window.location.origin;
 
         $.post(currentURL + "/api/friends", userData, function(data){
+            console.log(data)
             //post results that the best match's name and photo are displayed.
 	    	$("#matchName").text(data.name);
 	    	$('#matchImg').attr("src", data.photo);
@@ -242,7 +243,6 @@ $("#submitData").on('click', function() {
 
         //This works but I don't think I need it
         //$.get(currentURL + "/api/friends", function(data) {
-        //$( ".result" ).html( data );
         //console.log("data from get below")
         //console.log(data);
         //});
