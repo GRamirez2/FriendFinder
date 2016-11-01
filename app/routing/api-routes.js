@@ -11,6 +11,8 @@ module.exports = function (app){
     // POST tables/
     app.post('/api/friends', function(req, res) {
         var body = req.body;
+        friendData.push(body);
+        res.json(anything);
         // This requires new logic
         // if (tables.length < 5) {
         //   tables.push(body);

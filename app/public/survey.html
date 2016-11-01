@@ -6,7 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <script src="https://code.jquery.com/jquery.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     </head>
     <body>   
@@ -137,7 +141,28 @@
                 <br>
             </div><!end of col-md-8>
         </div><!end of row>
+    <!--Model -->
+        <div id="theMatch" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
 
+                <!--Model Content-->
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Here is your new Friend!</h4>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <p>**This is where the name and photo will go**</p>
+                    <hr>
+                    <img id="matchImg" src="https://pbs.twimg.com/profile_images/650100474226458625/-nngF2Y1.jpg">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+    </div>
     </div><!end of main container>
 <script type="text/javascript">
 
@@ -180,14 +205,47 @@ $("#submitData").on('click', function() {
         var q10 = $("input[name=q10]:checked").val();
         if(q10 == undefined){alert("Please answer question 10");return;}
 
-        
+        //new user object to post
         var userData = {
             name:user,
-            user:photo,
+            photo:photo,
             scores:[q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]
         }
+        //clearing values after sumbiting
+        $("#userName").val("");
+        $("#photoURL").val("");
+        $('input[name=q1]').attr('checked',false);
+        $('input[name=q2]').attr('checked',false);
+        $('input[name=q3]').attr('checked',false);
+        $('input[name=q4]').attr('checked',false);
+        $('input[name=q5]').attr('checked',false);
+        $('input[name=q6]').attr('checked',false);
+        $('input[name=q7]').attr('checked',false);
+        $('input[name=q8]').attr('checked',false);
+        $('input[name=q9]').attr('checked',false);
+        $('input[name=q10]').attr('checked',false);
 
-        console.log(userData)
+        var currentURL = window.location.origin;
+
+        $.post(currentURL + "/api/friends", userData, function(data){
+            //post results that the best match's name and photo are displayed.
+	    	$("#matchName").text(data.name);
+	    	$('#matchImg').attr("src", data.photo);
+
+		    // turn on modal
+		    $("#theMatch").modal('toggle');
+            //console.log("data from post call back")
+            //console.log(data.name)
+            //console.log(data.photo)
+            //console.log(data.scores)
+        })
+
+        //This works but I don't think I need it
+        //$.get(currentURL + "/api/friends", function(data) {
+        //$( ".result" ).html( data );
+        //console.log("data from get below")
+        //console.log(data);
+        //});
     	
     return false;
     });
