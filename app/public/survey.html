@@ -153,9 +153,8 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="matchName"></h2>
-                    <p>**This is where the name and photo will go**</p>
                     <hr>
-                    <img id="matchImg" src="https://pbs.twimg.com/profile_images/650100474226458625/-nngF2Y1.jpg">
+                    <img id="matchImg" style="width: 100%;" src="https://pbs.twimg.com/profile_images/650100474226458625/-nngF2Y1.jpg">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -228,7 +227,7 @@ $("#submitData").on('click', function() {
         var currentURL = window.location.origin;
 
         $.post(currentURL + "/api/friends", userData, function(data){
-            console.log(data)
+            //console.log(data)
             //post results that the best match's name and photo are displayed.
 	    	$("#matchName").text(data.name);
 	    	$('#matchImg').attr("src", data.photo);
@@ -239,7 +238,7 @@ $("#submitData").on('click', function() {
             //console.log(data.name)
             //console.log(data.photo)
             //console.log(data.scores)
-        })
+        });
 
         //This works but I don't think I need it
         //$.get(currentURL + "/api/friends", function(data) {

@@ -25,14 +25,18 @@ module.exports = function (app){
 
         }
 
-        
+        var lowestScore = eachUserSum[0];
+        var winnerIndex = 0;
 
-
+        for(var i=0; i<eachUserSum.length; i++){
+            if(eachUserSum[i] < lowestScore){
+                lowestScore = eachUserSum[i];
+                winnerIndex = i;
+            }
+        } 
         
-        
-        
-        // friendData.push(body);
-        res.json(friendData[match]);
+        friendData.push(newUser);
+        res.json(friendData[winnerIndex]);
     });
 
 };//end of module
