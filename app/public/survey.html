@@ -141,8 +141,6 @@
     </div><!end of main container>
 <script type="text/javascript">
 
-var answerArr = [];
-
 $("#submitData").on('click', function() {
         var user = $("#userName").val();
         if(user == ""){alert("Please enter your name");
@@ -153,36 +151,43 @@ $("#submitData").on('click', function() {
         return;}//else{console.log(photo)};
     
         var q1 = $("input[name=q1]:checked").val();
-        if(q1 == undefined){alert("Please answer question 1");return;}else{answerArr.push(q1);}
+        if(q1 == undefined){alert("Please answer question 1");return;}
         
         var q2 = $("input[name=q2]:checked").val();
-        if(q2 == undefined){alert("Please answer question 2");return;}else{answerArr.push(q2);}
+        if(q2 == undefined){alert("Please answer question 2");return;}
 
         var q3 = $("input[name=q3]:checked").val();
-        if(q3 == undefined){alert("Please answer question 3");return;}else{answerArr.push(q3);}
+        if(q3 == undefined){alert("Please answer question 3");return;}
 
         var q4 = $("input[name=q4]:checked").val();
-        if(q4 == undefined){alert("Please answer question 4");return;}else{answerArr.push(q4);}
+        if(q4 == undefined){alert("Please answer question 4");return;}
 
         var q5 = $("input[name=q5]:checked").val();
-        if(q5 == undefined){alert("Please answer question 5");return;}else{answerArr.push(q5);}
+        if(q5 == undefined){alert("Please answer question 5");return;}
 
         var q6 = $("input[name=q6]:checked").val();
-        if(q6 == undefined){alert("Please answer question 6");return;}else{answerArr.push(q6);}
+        if(q6 == undefined){alert("Please answer question 6");return;}
 
         var q7 = $("input[name=q7]:checked").val();
-        if(q7 == undefined){alert("Please answer question 7");return;}else{answerArr.push(q7);}
+        if(q7 == undefined){alert("Please answer question 7");return;}
 
         var q8 = $("input[name=q8]:checked").val();
-        if(q8 == undefined){alert("Please answer question 8");return;}else{answerArr.push(q8);}
+        if(q8 == undefined){alert("Please answer question 8");return;}
 
         var q9 = $("input[name=q9]:checked").val();
-        if(q9 == undefined){alert("Please answer question 9");return;}else{answerArr.push(q9);}
+        if(q9 == undefined){alert("Please answer question 9");return;}
 
         var q10 = $("input[name=q10]:checked").val();
-        if(q10 == undefined){alert("Please answer question 10");return;}else{answerArr.push(q10);}
+        if(q10 == undefined){alert("Please answer question 10");return;}
 
-        console.log("complete")
+        
+        var userData = {
+            name:user,
+            user:photo,
+            scores:[q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]
+        }
+
+        console.log(userData)
     	
     return false;
     });
