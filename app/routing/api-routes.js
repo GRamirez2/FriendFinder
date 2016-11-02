@@ -16,17 +16,21 @@ module.exports = function (app){
 
         for (var i = 0; i < friendData.length; i++){
             var eachUser = friendData[i];
+            //console.log(eachUser)
+            //console.log(eachUser.scores)
 
             for(var s=0; s < 10; s++){
                 var sumDiff = Math.abs(eachUser.scores[s] - newUser.scores[s])
                 sumDiffTotal += sumDiff;
             }
             eachUserSum[i] = sumDiffTotal;
+            //console.log(eachUserSum)
 
         }
 
         var lowestScore = eachUserSum[0];
         var winnerIndex = 0;
+        //console.log(lowestScore)
 
         for(var i=0; i<eachUserSum.length; i++){
             if(eachUserSum[i] < lowestScore){
@@ -37,6 +41,7 @@ module.exports = function (app){
         
         friendData.push(newUser);
         res.json(friendData[winnerIndex]);
+        console.log(i)
     });
 
 };//end of module
