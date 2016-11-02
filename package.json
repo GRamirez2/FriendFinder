@@ -1,7 +1,7 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "node and express servers",
+  "description": "A matching app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,12 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/GRamirez2/FriendFinder.git"
+    "url": "git+https://github.com/GRamirez2/FriendFinder.git"
   },
-  "keywords": [
-    "express"
-  ],
-  "author": "george ramirez",
+  "author": "George Ramirez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GRamirez2/FriendFinder/issues"
@@ -23,6 +20,6 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "nodemon": "^1.11.0"
+    "path": "^0.12.7"
   }
 }

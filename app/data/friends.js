@@ -1,37 +1,52 @@
 var friendsArr = [
 	{
-    name: 'michelle',
+    name: 'Michelle Obama',
     photo: 'https://peopledotcom.files.wordpress.com/2016/08/michelle-obama-1024.jpg',
     scores: [
-	     5,
-	     1,
-	     4,
-	     4,
-	     5,
-	     1,
-	     2,
-	     5,
-	     4,
-	     1
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3
 	   ]
   },
   {
-    name: 'obama',
+    name: 'President Obama',
     photo:'https://www.whitehouse.gov/sites/whitehouse.gov/files/images/twitter_cards_potus.jpg',
     scores: [
-	     2,
 	     5,
-	     3,
-	     2,
-	     1,
-	     4,
 	     5,
+	     5,
+	     5,
+	     5,
+	     5,
+	     5,
+	     5,
+	     5,
+	     5
+	   ]
+  },
+	{
+    name: 'Paco',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/A_typical_mexican_dress_for_men.jpg/1024px-A_typical_mexican_dress_for_men.jpg',
+    scores: [
 	     1,
 	     1,
-	     3
+	     1,
+	     1,
+	     1,
+	     1,
+	     1,
+	     1,
+	     1,
+	     1
 	   ]
   }
-
 ];
 
 module.exports = friendsArr;

@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var nodemon = require('nodemon');
+
 
 // CREATE SERVER
 var app = express();
@@ -14,8 +14,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // ROUTER - do I need to change these if I move this file?
-require('app/routing/api-routes.js')(app); 
-require('app/routing/html-routes.js')(app);
+require('./app/routing/api-routes.js')(app); 
+require('./app/routing/html-routes.js')(app);
 
 // START SERVER
 app.listen(PORT, function() {
